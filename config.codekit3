@@ -9,6 +9,12 @@
   ],
   "creatorBuild" : "34576",
   "files" : {
+    "\/build" : {
+      "ft" : 65536,
+      "oA" : 1,
+      "oAP" : "\/build\/build",
+      "oF" : 0
+    },
     "\/README.md" : {
       "cB" : 0,
       "cS" : 0,
@@ -596,11 +602,11 @@
       "eJ" : 0,
       "ft" : 1,
       "iI" : 0,
-      "ma" : 1,
+      "ma" : 0,
       "mS" : 0,
       "oA" : 0,
-      "oAP" : "\/build\/css\/styles.css",
-      "oF" : 2,
+      "oAP" : "\/build\/less\/styles.css",
+      "oF" : 0,
       "oS" : 1,
       "pg" : 0,
       "rwU" : 0,

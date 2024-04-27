@@ -10,7 +10,7 @@
 //@list-item-panel-padding:(@space-rem * 3);
 
 // Magic number
-@list-item-feature-img-height:@list-item-img-height;
+@list-item-feature-img-height:260px;
 
 @list-panel-inset:(@space-em * 3);
 //@list-panel-col-bg:#3D4B55;
@@ -92,7 +92,7 @@
 // Item
 // Article
 .media-list-item {
-	@list-item-img-height:100%;
+	//@list-item-img-height:260px;
 	
 	flex:0 0 100%;
 	// Define a grid
@@ -134,7 +134,7 @@
 		grid-row:1;
 		grid-column:2;
 		padding:@space-em @list-panel-inset;
-		display:flex;
+		//display:flex;
 		@media @mobile {
 			grid-row:2;
 			grid-column:1 / span 2;
@@ -182,11 +182,6 @@
 	}
 	// Insert Cover Image
 	.comp-cover-image();
-	.item-cover-img {
-		.feature-img {
-			max-height:@list-item-feature-img-height;
-		}
-	}
 	// footer
 	.media-actions {
 		display:flex;
