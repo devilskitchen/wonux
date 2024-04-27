@@ -2,9 +2,13 @@
 
 .category-style() {
 	display:flex;
-	color:@cat-col-txt;
-	border:1px solid @color1;
-	background:fade(@cat-col-bg,80%);
+	//color:@cat-col-txt;
+	//color:rgba(255,255,255,0.8);
+	color:@color1;
+	//border:1px solid @color1;
+	//background:fade(@cat-col-bg,80%);
+	border:1px solid fade(@color1,50%);
+	background:fade(@color1,30%);
 	font-weight:700;
 	.uppercase();
 	border-radius:4px;
@@ -22,6 +26,7 @@
 		transition:0.15s linear;
 		z-index:4;
 		background:@color1;
+		color:@cat-col-txt;
 	}
 }
 
