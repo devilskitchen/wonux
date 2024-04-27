@@ -598,15 +598,15 @@
     "\/source\/less\/styles.less" : {
       "aP" : 1,
       "bl" : 0,
-      "co" : 0,
+      "co" : 1,
       "eJ" : 0,
       "ft" : 1,
       "iI" : 0,
-      "ma" : 0,
+      "ma" : 1,
       "mS" : 0,
       "oA" : 0,
-      "oAP" : "\/build\/less\/styles.css",
-      "oF" : 0,
+      "oAP" : "\/build\/css\/styles.css",
+      "oF" : 2,
       "oS" : 1,
       "pg" : 0,
       "rwU" : 0,
@@ -847,7 +847,7 @@
     "displayValueWasSetByUser" : 0,
     "iconImageName" : "brackets-cafe",
     "iconImageWasSetByUser" : 0,
-    "lastBuiltDate" : 735917562.56752503
+    "lastBuiltDate" : 735930727.04478395
   },
   "projectSettings" : {
     "abortBuildOnError" : 1,

@@ -1,14 +1,14 @@
 /*==== CATEGORY LIST COMPONENT ====*/
 
-.category-style() {
+.category-style(@cat-col:@color3;) {
 	display:flex;
 	//color:@cat-col-txt;
 	//color:rgba(255,255,255,0.8);
-	color:@color1;
+	color:fade(@cat-col,90%);
 	//border:1px solid @color1;
 	//background:fade(@cat-col-bg,80%);
-	border:1px solid fade(@color1,50%);
-	background:fade(@color1,15%);
+	border:1px solid fade(@cat-col,50%);
+	background:fade(@cat-col,15%);
 	font-weight:700;
 	.uppercase();
 	border-radius:4px;
@@ -26,9 +26,9 @@
 		transition:0.25s linear;
 		z-index:4;
 		//background:@color1;
-		color:@color1-hover-txt;
-		background:fade(@color1,60%);
-		border-color:fade(@color1,90%);
+		color:darken(@cat-col,50%);
+		background:fade(@cat-col,60%);
+		border-color:fade(@cat-col,90%);
 		transition:0.25s linear;
 	}
 }
