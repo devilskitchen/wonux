@@ -8,13 +8,13 @@
 	//border:1px solid @color1;
 	//background:fade(@cat-col-bg,80%);
 	border:1px solid fade(@color1,50%);
-	background:fade(@color1,30%);
+	background:fade(@color1,15%);
 	font-weight:700;
 	.uppercase();
 	border-radius:4px;
 	padding:(@space-em / 2) (@space-em * 1.5);
 	text-decoration:none;
-	transform:scale(1);
+	//transform:scale(1);
 	transition:0.25s linear;
 	position:relative;
 	z-index:3;
@@ -22,11 +22,14 @@
 	// Add icon
 	.add-icon(@icon-tag);
 	&:hover {
-		transform:scale(1);
-		transition:0.15s linear;
+		//transform:scale(1);
+		transition:0.25s linear;
 		z-index:4;
-		background:@color1;
-		color:@cat-col-txt;
+		//background:@color1;
+		color:@color1-hover-txt;
+		background:fade(@color1,60%);
+		border-color:fade(@color1,90%);
+		transition:0.25s linear;
 	}
 }
 

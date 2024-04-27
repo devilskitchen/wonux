@@ -2,7 +2,7 @@
 .actn-btn(@btn-icon:@icon-settings;@btn-col:@color1;) {
 	border:2px solid @btn-col;
 	color:@color1;
-	background:transparent;
+	background:fade(@btn-col,10%);
 	border-radius:1em;
 	padding:@space-em (@space-em * 2);
 	font-size:0.9em;
@@ -10,8 +10,10 @@
 	font-weight:600;
 	.add-icon(@btn-icon);
 	&:hover {
-		border:2px solid lighten(@btn-col,20%);
-		color:lighten(@btn-col,20%);
+		//border:2px solid @btn-col;
+		color:darken(@btn-col,70%);
+		background:fade(@btn-col,60%);
+		transition:0.25s linear;
 	}
 	&:active {
 		border:2px solid lighten(@btn-col,20%);
@@ -36,6 +38,10 @@ button {
 		padding:0;
 		&.actn-like {
 			.add-icon(@icon-like);
+			background:transparent;
+			&:hover {
+				color:rgba(255,255,255,0.9);
+			}
 			&:before {
 				order:1;
 				font-size:1.1em;
