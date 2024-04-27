@@ -1,0 +1,54 @@
+/*==== CATEGORY LIST COMPONENT ====*/
+
+.category-style() {
+	display:flex;
+	color:@cat-col-txt;
+	border:1px solid @color1;
+	background:fade(@cat-col-bg,80%);
+	font-weight:700;
+	.uppercase();
+	border-radius:4px;
+	padding:(@space-em / 2) (@space-em * 1.5);
+	text-decoration:none;
+	transform:scale(1);
+	transition:0.25s linear;
+	position:relative;
+	z-index:3;
+	box-shadow:0 1px 3px rgba(0,0,0,0.4);
+	// Add icon
+	.add-icon(@icon-tag);
+	&:hover {
+		transform:scale(1);
+		transition:0.15s linear;
+		z-index:4;
+		background:@color1;
+	}
+}
+
+// menu
+.comp-categories() {
+	.category-list {
+		list-style-type:none;
+		display:flex;
+		flex-wrap:wrap;
+		gap:(@space-em * 1.5);
+		// li
+		.category-item {
+			color:@cat-col-txt;
+			flex:0 0 auto;
+			a {
+				.category-style();
+			}
+		}
+	}
+}
+
+// General Category call
+.comp-categories();
+
+// 
+.media-list-info {
+	.category-list {
+		margin:(@space-em * 4) 0;
+	}
+}

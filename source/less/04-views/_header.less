@@ -1,0 +1,80 @@
+// Variables
+@header-height:50px;
+
+// Structure
+.wona-header {
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	z-index:10;
+	height:@header-height;
+	padding:0 @site-edge-gap;
+	background:rgba(30, 34, 49, 0.8);
+	backdrop-filter:blur(5px) saturate(120%);
+	box-shadow:0 0 0 2px rgba(0,0,0,0.2);
+	.inner {
+		font-size:0.9em;
+		display:flex;
+		padding:(@space-em * 1.5) 0;
+	}
+	.brand-wrap {
+		flex:1 0 auto;
+		margin:auto 0;
+		font-size:1em;
+		//text-transform:uppercase;
+		text-decoration:none;
+		display:flex;
+		.brand-logo {
+			flex:0 0 auto;
+			margin:auto (@space-em * 1.5) auto 0;
+			height:32px;
+			overflow:hidden;
+		}
+		.brand-name {
+			flex:0 0 auto;
+			margin:auto (@space-em * 4) auto 0;
+			color:rgba(255,255,255,0.85);
+			font-weight:400;
+			font-size:1.1em;
+			//letter-spacing:0.05em;
+		}
+	}
+	// search (NEW!)
+	.search {
+		flex:1 1 auto;
+		display:flex;
+		margin:auto 0;
+		label {
+			margin:auto (@space-em * 2) auto 0;
+			.visuallyhidden();
+		}
+		input {
+			border-radius:@space-em 0 0 @space-em;
+			border:2px solid rgba(255,255,255,0.2);
+			background:rgba(0,0,0,0.2);
+			padding:@space-em (@space-em * 2);
+			&:focus {
+				outline:none;
+			}
+		}
+	}
+	// menu
+	.area-menu {
+		flex:1 1 auto;
+		padding:0;
+		margin:0;
+		display:flex;
+		// TEMP
+		@media @mobile {
+			display:none;
+		}
+		a {
+			display:block;
+			margin:auto (@space-em * 2);
+			&:first-child {
+				margin-left:auto;
+			}
+		}
+	}
+}

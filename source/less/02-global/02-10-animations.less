@@ -1,0 +1,58 @@
+/*==== CSS animations ====*/
+
+// Shared transition animations
+// Slide panel down
+.scale-slide-down(@speed:0.25s;) {
+	transform:scaleY(0);
+	transform-origin:0 0;
+	transition:@speed ease-in;
+	// TEMP! .show-detail-card is included for backwards compatibility
+	.show-detail-card &,
+	.panel-active & {
+		transform:scaleY(1);
+		transition:@speed ease-out;
+	}
+}
+
+.inner-opacity(@speed:0.35s;) {
+	opacity:0;
+	transition:(@speed - 0.15) ease-in;
+	// TEMP! .show-detail-card is included for backwards compatibility
+	.show-detail-card &,
+	.panel-active & {
+		opacity:1;
+		transition:@speed ease-out;
+	}
+}
+
+// Grow panel from centre
+.scale-up(@speed:0.25s;) {
+	transform:scale(0);
+	transition:@speed ease-in;
+	> * {
+		opacity:0;
+		transition:0.2s ease-in;
+	}
+	.panel-active & {
+		transform:scale(1);
+		transition:@speed ease-out;
+		> * {
+			opacity:1;
+			transition:0.35s ease-in;
+		}
+	}
+}
+
+// Real keyframe animations
+// fade
+@keyframes fade-out {
+	0% {
+		opacity:1;
+	}
+	
+	100% {
+		opacity:0;
+	}
+}
+
+// Moving transforms here, to allow for easier IE8 substitutes

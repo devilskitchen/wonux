@@ -1,0 +1,81 @@
+/*==== HTML FORM ELEMENTS ====*/
+
+/* !Form mixins */
+#form-elements {
+	// Text inputs
+	.field-inputs () {
+		width:100%;
+		&:hover {
+		}
+		&:focus {
+		}
+		&:invalid {
+		}
+		&:valid {
+			
+		}
+	}
+	// Remove WebKit's default search form styles
+	.webkit-search-clean () {
+		input[type="search"] {
+			&::-webkit-search-decoration,
+			&::-webkit-search-cancel-button,
+			&::-webkit-search-results-button,
+			&::-webkit-search-results-decoration {
+				display: none;
+			}
+		}
+		input[type="search"] {
+			-webkit-appearance: textfield;
+			-webkit-box-sizing: content-box;
+		}
+	}
+}
+
+//.app-container {
+
+/* !Label */
+label {
+
+}
+
+/* !Textarea */
+textarea {
+
+}
+
+select {
+	option {}
+}
+
+/* !Inputs */
+input {
+	// Text inputs
+	&[type='text'],
+	&[type='search'],
+	&[type='password'],
+	&[type='tel'],
+	&[type='url'],
+	&[type='email'] {
+		#form-elements > .field-inputs;
+	}
+	// Tick-boxes, radio buttons, etc.
+	&[type='checkbox'],
+	&[type='radio'] {
+	}
+	// Time inputs
+	&[type='datetime'],
+	&[type='date'],
+	&[type='month'],
+	&[type='week'],
+	&[type='time'],
+	&[type='datetime-local'] {
+	}
+	// Numbers
+	&[type='number'],
+	&[type='range'],
+	&[type='color'] {
+	}
+}
+
+/*------------------------------------*/

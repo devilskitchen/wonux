@@ -1,0 +1,91 @@
+/*==== COMPONENT: MEDIA ACTIONS ====*/
+
+// Variables
+@actn-button-size:1.6em;
+@actn-icon-size:1.4em;
+
+.comp-media-actions() {
+	// Menu
+	.wona-actions,
+	.service-actions {
+		display:flex;
+		flex-wrap:wrap;
+		gap:@space-em;
+		list-style-type:none;
+		.action-item {
+			display:flex;
+			flex:0 0 auto;
+			a {
+				display:flex;
+				flex:0 0 auto;
+				background:rgba(0,0,0,0.3);
+				padding:@space-em (@space-em * 2) @space-em @space-em;
+				border-radius:2px;
+				text-decoration:none;
+				&:hover {
+					background:rgba(0,0,0,0.6);
+				}
+			}
+			.link-icon,
+			.link-txt {
+				display:block;
+				margin-top:auto;
+				margin-bottom:auto;
+			}
+			.link-icon {
+				width:@actn-button-size;
+				height:@actn-button-size;
+				margin-right:(@space-em * 1.5);
+				img {
+					width:100%;
+					height:100%;
+					object-fit:contain;
+					object-position:center center;
+				}
+			}
+			.link-txt {
+			}
+		}
+	}
+	.wona-actions {
+		margin:auto auto auto 0;
+		.action-item {
+			a {
+				&.wona-add-to-list {
+					.add-icon(@icon-add;@icon-regular);
+					&:before {
+						font-size:@actn-icon-size;
+					}
+				}
+				&.wona-featured-lists {
+					.add-icon(@icon-roadmap;@icon-regular);
+					&:before {
+						font-size:@actn-icon-size;
+					}
+				}
+				&.wona-buy {
+					.add-icon(@icon-cart;@icon-regular);
+					&:before {
+						font-size:@actn-icon-size;
+					}
+				}
+			}
+		}
+	}
+	// menu
+	.service-actions {
+		flex:0 1 auto;
+		//justify-content:flex-end;
+		margin:auto 0;
+		.action-item {
+			display:flex;
+			flex:0 0 auto;
+			a {
+				color:rgba(255,255,255,0.8);
+				&:hover {
+					color:rgba(255,255,255,1);
+				}
+			}
+		}
+	}
+}

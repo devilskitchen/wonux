@@ -1,0 +1,96 @@
+/*==== ICONS SHOULD ALL BE STATED IN THIS FILE ====*/
+
+// .add-icon doesn't set the :before element
+// .set-icon(@icon-code;@space-right:@space-px;) {
+// 	&:before {
+// 		&:extend(.fonticon);
+// 		content:"\@{icon-code}";
+// 		display:inline-block;
+// 		margin-right:@space-right;
+// 	}
+// }
+
+
+.add-icon(@icon-code:@icon-settings;@icon-weight:@icon-solid;) {
+	&::before {
+		display:inline-block;
+		text-rendering:auto;
+		-webkit-font-smoothing:antialiased;
+		font:@icon-weight;
+		content:"\@{icon-code}";
+		vertical-align:middle;
+		margin:auto @space-em auto 0;
+	}
+}
+
+// Icon weights
+@icon-thin:var(--fa-font-thin);
+@icon-light:var(--fa-font-light);
+@icon-regular:var(--fa-font-regular);
+@icon-solid:var(--fa-font-solid);
+
+// Icon manifest (FontAwesome references)
+@icon-settings:f013;
+// @icon-multi-settings:f085;
+@icon-add:f067;
+@icon-search:f002;
+// @icon-cancel:f057;
+// @icon-save:f05d;
+// @icon-saved:f058;
+// @icon-login:f090;
+@icon-user:f007;
+@icon-users:f0c0;
+// @icon-groups:@icon-users;
+// @icon-tel:f095;
+// @icon-mobile:f10b;
+// @icon-mail:f0e0;
+// @icon-edit:f044;
+// @icon-upload:f0ee;
+// @icon-download:f0ed;
+@icon-like:f087;
+// @icon-leave:f08e;
+@icon-close:f00d;
+// @icon-emoji:f118;
+// @icon-burger-menu:f0c9;
+// @icon-notifications-on:f0f3;
+// @icon-notifications-off:f1f7;
+// @icon-sort-ascending:f160;
+// @icon-sort-descending:f161;
+// @icon-archive:f187;
+// @icon-delete:f1f8;
+// @icon-circle:f10c;
+// @icon-dashboard:f0e4;
+// @icon-reports:f080;
+// @icon-job:f0e8;
+// @icon-site-admin:f233;
+// @icon-media:f15b;
+// @icon-support:f1cd;
+// @icon-alert-warning:f071;
+@icon-tag:f02b;
+@icon-tags:f02c;
+// @icon-mail-report:f064;
+// @icon-tick:f00c;
+// @icon-accepted-call:@icon-tick;
+// @icon-resolved-call:f192;
+// @icon-closed-call:@icon-archive;
+// @icon-archive:f187;
+// @icon-ellipsis:f141;
+// @icon-assign-agent:@icon-mail-report;
+// @icon-expand-down:f0d7;
+// @icon-server:f233;
+// @icon-expand-right:f0da;
+@icon-cart:f07a;
+// @icon-improvement:f201;
+// @icon-module:f1b3;
+// @icon-back:f190;
+// @icon-forward:f18e;
+// // Release Notes
+@icon-roadmap:f0ae;
+// @icon-releases:f1b3;
+// @icon-youtube:f167;
+// @icon-youtube-video:f16a;
+// Wona
+@icon-share:f1e0;
+@icon-comment:f075;
+@icon-comments:f086;
+@icon-media-list:f03a;

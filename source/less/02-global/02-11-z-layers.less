@@ -1,0 +1,57 @@
+/*==== Z Index Layers ==
+
+	1. Flash Messages (because the search could error too)
+	2. Top Navigation
+	3. Universal Search
+	4. Media Upload (can't upload in Search)
+	5. Detail Cards (you could upload Media whilst a Detail Card is showing)
+	6. App Selector (vertical buttons)
+	7. App Panels (Contacts, Groups, Media, etc.)
+	8. Sub Panels (Group Admin, etc.)
+	9. Focused Application Window (e.g. Chat Stream)
+
+====*/
+
+// 1. Flash Messages: probably the very top layer
+@z-flash-msg:99999;
+
+// 2. Top Nav
+@z-top-nav:9999;
+
+// 3. Universal Search
+@z-u-search-overlay:99999;
+
+// 4. Media Upload Overlay
+@z-app-media-overlay:99999;
+
+// 5. Detail cards
+@z-detail-card:999999;
+@z-profile-card:990;
+
+// 6. App Selector buttons
+@z-app-resource-nav:998;
+@z-app-resource-nav-mobile:9999;
+
+// 7. Side Panels
+@z-app-access:999;
+	@z-panel-sliders:10;
+	@z-panel-sliders-mobile:1;
+	@z-panel-header:2;
+	@z-panel-content:2;
+
+// 8. Sub-panels, e.g. Group Admin
+@z-sub-panels:1;
+	// Contact List
+	@z-status-light:10;
+
+// 9. Focused Application Window Elements
+@z-app-main-window:2;
+@z-contextual-menu:999;
+
+	// Chat
+	
+		// Stream
+		@z-chat-stream-header:11;
+		
+		// Input
+		@z-chat-txt-input:2;

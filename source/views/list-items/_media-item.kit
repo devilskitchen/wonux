@@ -1,0 +1,25 @@
+<!-- $cardsClass = media-list -->
+<!-- $actionsClass = media -->
+
+<article class="<!--$cardsClass-->-item">
+	<header class="item-title">
+		<h2><!--$recListItemTitle--></h2>
+	</header>
+	<figure class="item-cover-img">
+		<span class="img-background">
+			<img src="<!--$recListItemImg-->">
+		</span>
+		<!-- The image sizing will work without the wrap, but not with it. Bah! -->
+		<!--span class="img-wrap"-->
+			<img src="<!--$recListItemImg-->" class="feature-img">
+		<!--/span-->
+	</figure>
+	<div class="item-description">
+		<p><!--$recListItemDescription--></p>
+	</div>
+	
+	<footer class="item-actions <!--$actionsClass-->-actions">
+		<!-- @import "_media-actions-wona" -->
+		<!-- @import "_media-actions-services" -->
+	</footer>
+</article>

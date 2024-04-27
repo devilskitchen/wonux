@@ -1,0 +1,45 @@
+// Variables
+@mobile-pressable-size:44px;
+
+#links {
+	.reset() {
+		text-decoration:none;
+		color:@txt-col;
+		&:hover {
+
+		}
+	}
+	.standard-links () {
+		color:@color1-link;
+		text-decoration:none;
+		&:visited {
+			color:darken(@color1-link,10%);
+			text-decoration:none;
+		}
+		&:hover,
+		&:focus {
+			color:lighten(@color1-link,4%);
+			text-decoration:underline;
+		}
+		// Fix for Chrome and Firefox
+		&:focus {
+			border:none;
+			outline:none;
+		}
+	}
+	.light-links () {
+		color:#FFFFFF;
+		text-decoration:none;
+		&:visited {
+			color:@off-white;
+			text-decoration:none;
+		}
+		&:hover,
+		&:focus {
+			color:lighten(@color1-hl,30%);
+			text-decoration:underline;
+		}
+	}
+}
+
+// Remove defaults

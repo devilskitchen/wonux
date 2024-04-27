@@ -1,0 +1,29 @@
+<!-- $cardsClass = list-cover -->
+<!-- $actionsClass = list -->
+
+<article class="<!--$cardsClass-->-item">
+	<header class="item-title">
+		<h2>
+			<a href="media-list.html" class="view-list" title="Link to List"><!--$recListItemTitle--></a>
+		</h2>
+	</header>
+	<figure class="item-cover-img">
+		<span class="img-background">
+			<img src="<!--$recListItemImg-->">
+		</span>
+		<!-- The image sizing will work without the wrap, but not with it. Bah! -->
+		<!--span class="img-wrap"-->
+			<img src="<!--$recListItemImg-->" class="feature-img">
+		<!--/span-->
+	</figure>
+	<!-- div class="item-description"
+		<p>$recListItemDescription</p>
+	</div -->
+	<aside class="item-engage">
+		<!-- @import "../components/_user-basic" -->
+		<!-- @import "../components/_btn-like" -->
+	</aside>
+	<footer class="item-actions">
+		<!-- @import "_list-actions-categories" -->
+	</footer>
+</article>

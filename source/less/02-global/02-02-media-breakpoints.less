@@ -1,0 +1,94 @@
+/*==== MEDIA QUERIES BREAKPOINTS ====*/
+
+// Breakpoints
+// ---- Source: http://blog.scur.pl/2012/06/variable-media-queries-less-css/
+// @highdensity: ~"only screen and (-webkit-min-device-pixel-ratio: 1.5)",
+//               ~"only screen and (min--moz-device-pixel-ratio: 1.5)",
+//               ~"only screen and (-o-min-device-pixel-ratio: 3/2)",
+//               ~"only screen and (min-device-pixel-ratio: 1.5)";
+// @mobile:      ~"only screen and (max-width: 780px)";
+// @tablet:      ~"only screen and (max-width: 1024px)";
+// @desktop:     ~"only screen and (min-width: 950px) and (max-width: 1128px)";
+// @desktop-xl:  ~"only screen and (min-width: 1129px)";
+// // Added breakpoints: CJDM 21/02/2013
+// @tablet-landscape:	~"only screen and (device-width:768px) and (device-height:1024px) and (orientation:landscape)";
+// @tablet-portrait: ~"@media only screen and (min-device-width: 768px) and (max-device-width:1024px) and (orientation:portrait)";
+// 
+// @mobile-retina: ~"only screen and (max-device-width: 1024px) and (-webkit-device-pixel-ratio: 2)";
+
+/* Small devices such as large phones (640px and up) */
+@mobile: ~"only screen and (max-width: 48em)";
+
+/* Medium devices such as tablets (768px and up) */
+@tablet: ~"only screen and (min-width: 48em) and (max-width: 64em)";
+
+/* Large devices such as laptops (1024px and up) */
+@desktop: ~"only screen and (min-width: 64em) and (max-width: 112em)";
+
+/* Largest devices such as desktops (1280px and up) */
+@desktop-xl: ~"only screen and (min-width: 112em)";
+
+/* Large devices such as laptops (1024px and up) */
+//@media only screen and (min-width: 64em) {...}
+
+/* Largest devices such as desktops (1280px and up) */
+//@media only screen and (min-width: 80em) {...}
+
+/* ---- Example deployment*/
+
+// section {
+//   @media @mobile {
+//     background: orange;
+//   }
+//   @media @tablet {
+//     background: purple;
+//   }
+//   @media @desktop {
+//     background: green;
+//   }
+//   @media @desktop-xl {
+//     background: blue;
+//   }
+//   @media @desktop, @desktop-xl {
+//     color: black;
+//   }
+// }
+
+
+
+/* !REMEMBER TO COMMENT THIS OUT FOR PRODUCTION! ====*/
+// Tag to enable visualisation of the Media Query break-points: this adds a label in the top-left corner that displays the current media query state.
+
+
+// body {
+// 	&:before {
+//     background: red;
+//     color:white;
+//     content:"undefined";
+//     right:0;
+//     opacity:0.8;
+//     padding:@space-em (@space-em * 2);
+//     position: fixed;
+//     text-align: center;
+//     bottom: 0;
+//     z-index: 9999;
+//     @media @mobile {
+//       background: orange;
+//       content: "mobile";
+//     }
+//     @media @tablet {
+//       background: purple;
+//       content: "tablet";
+//     }
+//     @media @desktop {
+//       background: green;
+//       content: "desktop";
+//     }
+//     @media @desktop-xl {
+//       background: blue;
+//       content: "desktop-xl";
+//     }
+// 	}
+// }
+
+

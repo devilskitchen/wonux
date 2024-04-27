@@ -1,0 +1,60 @@
+/*==== TYPOGRAPHY ====*/
+
+// Variable fonts
+.header-font(@font-weight:400;) {
+  font-family:"Roboto Slab", serif;
+  font-optical-sizing:auto;
+  font-weight:@font-weight;
+  font-style:normal;
+  letter-spacing:0.04em;
+}
+
+.body-font(@font-weight:300;@font-italic:0;) {
+  font-family:"Inter", sans-serif;
+  font-optical-sizing:auto;
+  font-weight:@font-weight;
+  font-style:normal;
+  font-variation-settings:
+    "slnt" @font-italic;
+}
+
+/* !Headings */
+// Fonts defined in 02-02-fonts.less
+// Sizes defined using Pearsonified's calculator: http://www.pearsonified.com/typography/
+h1 {
+  line-height:1.1;
+  color:rgba(255,255,255,0.8);
+}
+
+h1,
+h2,
+h3 {
+  margin:@space-em 0;
+  .header-font();
+}
+
+h2 {
+  //color:@color1;
+  color:rgba(255,255,255,0.8);
+  line-height:1.2;
+}
+
+h3 {
+  font-size:1.17rem;
+}
+
+h4 {
+  font-size:1em;
+  margin:@space-em 0;
+}
+
+p {
+  margin:@space-em 0;
+}
+
+// Font Styles
+.uppercase(){
+  text-transform:uppercase;
+  letter-spacing:0.05em;
+  font-size:0.6em;
+}

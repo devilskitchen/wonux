@@ -1,0 +1,101 @@
+/*==== USER LISTS ====*/
+
+// Should be on the page component
+// Aside
+.related-list {
+	margin:@list-item-panel-gap 0;
+}
+
+// Variables
+@panel-user-width:@panel-user-photo-size;
+@panel-user-photo-size:10em;
+
+.list-wrap {
+	padding:@list-item-panel-gap 0;
+}
+
+// ul
+.user-list {
+	list-style-type:none;
+	padding:0;
+	margin:0;
+	display:grid;
+	//grid:auto-flow/repeat(auto-fit,minmax(@panel-user-width,1fr));
+	grid:auto-flow/repeat(auto-fit,@panel-user-width);
+	gap:@list-item-panel-gap;
+	.user-item {
+		box-shadow:0 2px 5px rgba(0,0,0,0.4);
+		padding:0;
+		margin:0;
+		background:@list-panel-col-bg;
+		border-radius:4px;
+		//overflow:hidden;
+		transform:translateY(0);
+		transform-origin:top center;
+		transition:0.4s linear;
+		&:hover {
+			transform:translateY(-10px);
+			transition:0.25s linear;
+			box-shadow:0 20px 8px -4px rgba(0,0,0,0.3);
+			.img-wrap {
+				img {
+					transform:scale(1.2);
+					transform-origin:center center;
+					transition:0.25s linear;
+				}
+			}
+		}
+		// figure
+		.item-author {
+			flex-wrap:wrap;
+			position:relative;
+		}
+		.img-wrap {
+			flex:0 0 @panel-user-photo-size;
+			height:@panel-user-photo-size;
+			border-radius:0;
+			border:none;
+			overflow:hidden;
+			border-radius:4px 4px 0 0;
+			img {
+				width:100%;
+				height:100%;
+				object-fit:cover;
+				object-position:center center;
+				transform:scale(1);
+				transition:0.4s linear;
+			}
+		}
+		// figcaption
+		.author-name {
+			//unset:all;
+			position:absolute;
+			left:0;
+			right:0;
+			bottom:-2px;
+			display:block;
+			width:100%;
+			margin:0;
+			padding:(@space-em * 1.5) (@space-em * 2);
+			//background:@list-panel-col-band;
+			background:rgba(0,0,0,0.8);
+			.header-font();
+			line-height:1.2;
+		}
+		// footer
+		.meta-data {
+			padding:@space-em (@space-em * 2) (@space-em * 1.5) (@space-em * 2);
+			.user-followers {
+				font-size:0.8em;
+				color:@color1;
+				.add-icon(@icon-users);
+				.engage-count {
+					font-weight:600;
+				}
+				.meta-lbl {
+					color:rgba(255,255,255,0.5);
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,116 @@
+// Mixin
+.actn-btn(@btn-icon:@icon-settings;@btn-col:@color1;) {
+	border:2px solid @btn-col;
+	color:@color1;
+	background:transparent;
+	border-radius:1em;
+	padding:@space-em (@space-em * 2);
+	font-size:0.9em;
+	display:flex;
+	font-weight:600;
+	.add-icon(@btn-icon);
+	&:hover {
+		border:2px solid lighten(@btn-col,20%);
+		color:lighten(@btn-col,20%);
+	}
+	&:active {
+		border:2px solid lighten(@btn-col,20%);
+		color:lighten(@btn-col,20%);
+	}
+}
+
+// General
+button {
+	.actn-btn();
+}
+
+// Like button
+.actn-btn {
+	&.actn-like {
+		//order:2;
+		box-shadow:none;
+		margin:auto 0;
+		position:relative;
+		z-index:3;
+		border:none;
+		padding:0;
+		&.actn-like {
+			.add-icon(@icon-like);
+			&:before {
+				order:1;
+				font-size:1.1em;
+				margin:auto 0;
+				border:2px solid @color1;
+				border-radius:1em;
+				padding:(@space-em * 1) @space-em;
+			}
+			// Like count
+			.engage-count {
+				order:0;
+				margin:auto (@space-em * 1.5) auto 0;
+				font-weight:600;
+			}
+		}
+		.btn-txt {
+			.visuallyhidden();
+			//text-shadow:none;
+		}
+		&:hover {
+			border:none;
+			//color:@color1;
+		}
+		&:active {
+			border:none;
+			//color:@color2;
+		}
+	}
+}
+
+// Like button in context
+.engage-scores {
+	flex:0 0 auto;
+	margin-left:auto;
+	display:flex;
+	text-align:right;
+	font-size:0.9em;
+	.engage-count {
+		//order:1;
+		//margin:auto (@space-em * 1.5) auto 0;
+		//color:@color1;
+		//font-weight:600;
+	}
+	.media-list-info & {
+		display:flex;
+		flex-wrap:wrap;
+		gap:@list-item-panel-gap;
+	}
+}
+
+// Share button
+.actn-btn {
+	&.actn-share {
+		.actn-btn(@icon-share);
+	}
+	&.actn-show-discussion {
+		.actn-btn(@icon-comments);
+	}
+	&.actn-close-discussion {
+		.actn-btn(@icon-close);
+		&:before {
+			margin:auto;
+		}
+		.btn-txt {
+			.visuallyhidden();
+		}
+	}
+}
+
+.wona-header {
+	.actn-search {
+		border-radius:0 @space-em @space-em 0;
+		padding-left:(@space-em * 4);
+		padding-right:(@space-em * 4);
+		.add-icon(@icon-search);
+	}
+}
+

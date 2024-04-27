@@ -1,0 +1,62 @@
+/*==== COMPONENT: COVER IMAGE ====*/
+
+.comp-cover-image() {
+	.item-cover-img {
+		//border:1px solid fuchsia;
+		//grid-area:banner;
+		position:relative;
+		overflow:hidden;
+		display:flex;
+		padding:(@space-em * 2);
+		flex:0 0 @list-item-img-height;
+		order:2;
+		.feature-img {
+			z-index:1;
+			position:relative;
+			width:auto;
+			height:auto;
+			max-height:100%;
+			max-width:100%;
+			margin:auto;
+			box-shadow:0 0 0 2px rgba(255,255,255,0.2);
+			border-radius:2px;
+		}
+		// span
+		.img-wrap {
+			margin:auto;
+			position:relative;
+			z-index:1;
+			display:inline-block;
+			box-shadow:0 0 0 2px rgba(255,255,255,0.2);
+			border-radius:4px;
+			img {
+				z-index:1;
+				position:relative;
+				width:auto;
+				height:auto;
+				max-height:100%;
+				max-width:100%;
+				//display:block;
+			}
+		}
+		.img-background {
+			position:absolute;
+			top:0;
+			right:0;
+			bottom:0;
+			left:0;
+			display:block;
+			overflow:hidden;
+			img {
+				filter: blur(20px);
+				opacity:0.7;
+				transform:scale(1.0);
+				transform-origin:center center;
+				object-position: center center;
+				object-fit: cover;
+				width:200%;
+				height:200%;
+			}
+		}
+	}
+}

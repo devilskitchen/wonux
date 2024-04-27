@@ -1,0 +1,123 @@
+/*==== The read-only cover for lists ====*/
+
+// Variables
+@list-details-width:16em;
+@list-item-panel-width:18em;
+@list-item-panel-gap:(@space-em * 4);
+@list-item-panel-padding:(@space-em * 3);
+
+// Magic number
+@list-item-img-height:260px;
+
+@list-panel-inset:(@space-em * 3);
+@list-panel-col-bg:#3D4B55;
+//@list-panel-col-band:#2A3B46;
+@list-panel-col-band:rgba(0,0,0,0.2);
+
+// List Attributes
+@author-avatar-size:36px;
+
+// Categories
+@cat-col-bg:#F3D9BA;
+@cat-col-txt:#643800;
+
+// Main heading
+.list-subject {
+	margin:@list-item-panel-gap 0;
+}
+
+// Parent
+.cover-list {
+	display:grid;
+	gap:@list-item-panel-gap;
+	// Create as many columns of at least @list-item-panel-width width as can fit into the width, and make them all the same proportion to each other
+	grid: auto-flow / repeat(auto-fit, minmax(@list-item-panel-width, 1fr));
+}
+
+// Item
+.list-cover-item {
+	//display:grid;
+	//gap:@list-item-panel-gap;
+	// Create as many columns of at least 8em width as can fit into the width, and make them all the same proportion to each other
+	//grid: auto-flow / repeat(auto-fit, minmax(@list-item-panel-width, 1fr));
+	//padding:@space-em 0;
+	// grid-template:
+	// 	"head"
+	// 	"banner" 320px
+	// 	"title"
+	// 	"meta";
+	display:flex;
+	flex-direction:column;
+	background:@list-panel-col-bg;
+	box-shadow:0 1px 4px 1px rgba(0,0,0,0.4);
+	border-radius:0 0 4px 4px;
+	position:relative;
+	transform-origin:center center;
+	transform:translateY(0) scale(1);
+	transition:0.4s linear;
+	//overflow:hidden;
+	&:hover {
+		transform:translateY(-12px);
+		transition:0.25s linear;
+		z-index:1;
+		box-shadow:0 24px 12px -8px rgba(0,0,0,0.8);
+	}
+	.item-title {
+		//border:1px solid red;
+		//grid-area:title;
+		//position:relative;
+		padding:(@space-em * 2) @list-panel-inset;
+		display:flex;
+		background:@list-panel-col-band;
+		order:3;
+		box-shadow:inset 0 1px 1px -1px rgba(255,255,255,0.1);
+		h2 {
+			margin:auto;
+			display:-webkit-box;
+			-webkit-line-clamp:3;
+			line-clamp:3;
+			-webkit-box-orient:vertical;
+			text-overflow:ellipsis;
+			overflow:hidden;
+			a {
+				text-decoration:none;
+				color:rgba(255,255,255,0.8);
+				&:before {
+					content:"";
+					display:block;
+					position:absolute;
+					top:0;
+					right:0;
+					bottom:0;
+					left:0;
+					z-index:2;
+				}
+			}
+		}
+	}
+	.item-engage {
+		//border:1px solid green;
+		//border-top:2px solid @color1;
+		//grid-area:head;
+		display:flex;
+		padding:(@space-em * 1.5) @list-panel-inset;
+		//background:@list-panel-col-band;
+		order:1;
+		font-size:0.8em;
+	}
+	// Import Author Styles
+	.comp-author();
+	.author-name {
+		.visuallyhidden();
+	}
+	// Insert Cover Image Component
+	.comp-cover-image();
+	//footer
+	.item-actions {
+		//grid-area:meta;
+		padding:(@space-em / 2) @list-panel-inset;
+		order:4;
+		// Category List styles
+		.comp-categories();
+	}
+}

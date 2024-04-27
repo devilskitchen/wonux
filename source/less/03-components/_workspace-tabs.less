@@ -1,0 +1,116 @@
+// Workspace switchers
+
+.workspace-tabs {
+	// ul
+	.tabs-list {
+		list-style-type:none;
+		display:flex;
+		padding:@space-em;
+		margin:0;
+		justify-content:flex-start;
+		li {
+			flex:0 1 auto;
+			padding:@space-em (@space-em * 2);
+			margin:0;
+			display:flex;
+			&.tab-select-list-media {
+				span {
+					.add-icon(@icon-media-list);
+				}
+				&.tab-select-list-discussion {
+				}
+			}
+		}
+	}
+	// Panels
+	.tab-panels {
+		display:flex;
+	}
+	.tab-body {
+		flex:2 2 20em;
+	}
+	.tab-body-list-discussion {
+		flex:0 0 0em;
+		opacity:0.1;
+		transition:flex 0.2s 0.3s linear, opacity 0.2s linear;
+		overflow:hidden;
+		@media @mobile {
+			position:fixed;
+			top:0;
+			left:0;
+			height:100vh;
+			width:100vw;
+			z-index:9;
+			transform:translateX(100%);
+			transform-origin:top right;
+			transition:0.25s linear;
+			overflow-y:auto;
+			overflow-x:hidden;
+			background:rgba(0,0,0,0.95);
+			-webkit-backdrop-filter:blur(5px) saturate(105%);
+			padding-top:(@header-height * 1.5);
+		}
+		// Comment form
+		.comment-form {
+			label {
+				.visuallyhidden();
+			}
+			textarea {
+				background:rgba(0,0,0,0.2);
+				border:1px solid rgba(0,0,0,0.4);
+				border-radius:@space-em;
+				width:100%;
+				min-height:5em;
+				padding:@space-em;
+			}
+		}
+	}
+	&.show-discussion {
+		.tab-body-list-discussion {
+			flex:1 1 10em;
+			opacity:1;
+			transition:flex 0.2s linear, opacity 0.3s 0.2s linear;
+			@media @mobile {
+				transform:translateX(0);
+				transition:0.25s linear;
+			}
+		}
+	}
+	.discussion-wrap {
+		font-size:0.8em;
+	}
+}
+
+// Discussion Panel
+.list-discussion-panel {
+	padding:0 0 (@space-em * 2) @list-item-panel-gap;
+	@media @mobile {
+		padding:0 @list-item-panel-gap;
+	}
+	// header
+	.discussion-header {
+		position:relative;
+		margin-bottom:(@space-em * 2);
+		.actn-btn {
+			position:absolute;
+			top:0;
+			right:@space-em;
+			height:2em;
+			width:2em;
+			text-align:center;
+			margin:auto;
+			padding:0;
+		}
+	}
+	.info-guide {
+		margin:(@space-em * 2) 0;
+		color:rgba(255,255,255,0.7);
+	}
+}
+
+// Prevent the page scrolling
+.stop-scroll {
+	@media @mobile {
+		overflow-y:hidden;
+	}
+}
