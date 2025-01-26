@@ -7,8 +7,16 @@
       "uuidString" : "CAA22CA2-5D2A-4D87-9277-8CA8757DCBCB"
     }
   ],
-  "creatorBuild" : "34576",
+  "creatorBuild" : "34627",
   "files" : {
+    "\/.nova\/Configuration.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/build\/.nova\/Configuration-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
     "\/build" : {
       "ft" : 65536,
       "oA" : 1,
@@ -754,6 +762,14 @@
       "oAP" : "\/build\/views\/components\/_comment+reply.html",
       "oF" : 0
     },
+    "\/source\/views\/components\/_cover-image.kit" : {
+      "cB" : 1,
+      "ft" : 2048,
+      "hM" : 2,
+      "oA" : 1,
+      "oAP" : "\/build\/views\/components\/_cover-image.html",
+      "oF" : 0
+    },
     "\/source\/views\/components\/_user-basic.kit" : {
       "cB" : 1,
       "ft" : 2048,
@@ -1347,10 +1363,6 @@
         "active" : 0,
         "optionString" : "{'before': true, 'after': true, 'overrides': {}}"
       },
-      "line-comment-position" : {
-        "active" : 0,
-        "optionString" : "{'position': 'above'}"
-      },
       "linebreak-style" : {
         "active" : 0,
         "optionString" : "'unix'"
@@ -1402,10 +1414,6 @@
       "max-statements-per-line" : {
         "active" : 0,
         "optionString" : "{'max': 1}"
-      },
-      "multiline-comment-style" : {
-        "active" : 0,
-        "optionString" : "'starred-block'"
       },
       "multiline-ternary" : {
         "active" : 0,
@@ -1548,7 +1556,8 @@
         "active" : 0
       },
       "no-extra-boolean-cast" : {
-        "active" : 1
+        "active" : 1,
+        "optionString" : "{'enforceForInnerExpressions': false}"
       },
       "no-extra-label" : {
         "active" : 0
@@ -1633,7 +1642,8 @@
         "optionString" : "{'ignore': [], 'ignoreArrayIndexes': true, 'ignoreDefaultValues': false, 'ignoreClassFieldInitialValues': false, 'enforceConst': false, 'detectObjects': false}"
       },
       "no-misleading-character-class" : {
-        "active" : 1
+        "active" : 1,
+        "optionString" : "{'allowEscape': false}"
       },
       "no-mixed-operators" : {
         "active" : 0,
@@ -2001,7 +2011,8 @@
         "active" : 0
       },
       "require-unicode-regexp" : {
-        "active" : 0
+        "active" : 0,
+        "optionString" : "{'requireFlag': 'u'}"
       },
       "require-yield" : {
         "active" : 1
@@ -2292,11 +2303,9 @@
       "autoOutputPathReplace1" : "sass",
       "autoOutputPathReplace2" : "css",
       "autoOutputPathStyle" : 0,
-      "compilerType" : 0,
       "cssoStyle" : 0,
-      "decimalPrecision" : 10,
       "emitCharset" : 1,
-      "outputStyle" : 0,
+      "outputStyle" : 1,
       "purgeCSSStyle" : 0,
       "shouldRunAutoprefixer" : 0,
       "shouldRunBless" : 0,
@@ -2411,6 +2420,7 @@
     ],
     "rollupTreeshakingEnabled" : 1,
     "rollupTreeshakingModuleSideEffects" : 1,
+    "sassWarningStyle" : 1,
     "skippedFoldersString" : "\/source\/fonts,_logs,logs,cache,node_modules,.idea,\/storage\/framework\/sessions,log,_cache",
     "sourceFolderName" : "source",
     "susyVersion" : 3,
@@ -2431,6 +2441,7 @@
     "tsImportHelpers" : 0,
     "tsIsolatedModules" : 0,
     "tsJSXFactory" : "React.createElement",
+    "tsJSXFragmentFactory" : "Fragment",
     "tsNoEmitHelpers" : 0,
     "tsNoFallthroughCasesInSwitch" : 0,
     "tsNoImplicitAny" : 0,
